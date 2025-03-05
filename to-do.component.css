@@ -1,0 +1,84 @@
+/* Center the container */
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: #a5c0da;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling */
+  h2 {
+    text-align: center;
+    color: #dd2727;
+    font-weight: bold;
+  }
+  
+  /* Form styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  /* Submit button */
+  .btn-success {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  /* List styling */
+  .list-group {
+    margin-top: 20px;
+  }
+  
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: #cedc86;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+  }
+  
+  .list-group-item:hover {
+    transform: scale(1.02);
+    background: #e9ecef;
+  }
+  
+  /* Task text */
+  .task-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Buttons */
+  .btn-primary, .btn-danger {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  .btn-primary:hover {
+    background: #0056b3;
+  }
+  
+  .btn-danger:hover {
+    background: #dc3545;
+  }
+  
+  /* Status text */
+  .pending {
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
+  .completed {
+    color: #28a745;
+    font-weight: bold;
+  }
+  

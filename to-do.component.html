@@ -1,0 +1,37 @@
+<div class="container mt-4">
+    <h2 class="text-center">To-Do List</h2>
+  
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="mb-3">
+      <div class="form-group">
+        <label>Task Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter task" required>
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" formControlName="date">
+      </div>
+      <div class="form-group">
+        <label>Status</label>
+        <select class="form-control" formControlName="status">
+          <option>Pending</option>
+          <option>Completed</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success mt-2">
+        {{ editingTaskId ? 'Update Task' : 'Add Task' }}
+      </button>
+    </form>
+  
+    <ul class="list-group">
+      <li *ngFor="let task of tasks" class="list-group-item d-flex justify-content-between align-items-center">
+        <span>
+          <strong>{{ task.name }}</strong> ({{ task.date || 'No Date' }}) - <i>{{ task.status }}</i>
+        </span>
+        <div>
+          <button class="btn btn-primary btn-sm me-2" (click)="editTask(task)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteTask(task.id)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
